@@ -1,0 +1,41 @@
+.menuNav{
+  background-color: rgb(211, 143, 188);
+  color:rgb(0, 0, 0);
+  position: sticky;
+  top: 0; 
+width: 100%; 
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.crearLista{
+  display: inline-block;  /*elemento de línea */
+}
+
+.lista{
+  list-style: none;
+  display: inline-block; 
+  margin: 0 20px;
+  
+}
+
+  nav ul li a{
+      font-size: 1.8rem;
+      text-decoration: none;
+      color: #250118;
+      align-items: center;
+  }
+
+  nav ul li a:hover{ /*cuando el cursor este sobre la opción del nav*/
+      font-weight: 600;
+      color: black;
+      background-color:rgb(160, 108, 143) ;
+      border-radius: 3px;
+  }
+  .logo{ /*modificamos el tamaño del logo*/
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
