@@ -1,5 +1,3 @@
-//map
-//import Item from './Item.js'
 
 import Item from "./Item";
 

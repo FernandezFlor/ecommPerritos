@@ -1,5 +1,5 @@
 import Nav from './components/Nav.js'
-import Items from './components/ItemListContainer.js'
+import Item from './components/ItemDetailContainer.js'
 import ItemCount from './components/ItemCount.js'
 
 import './App.css';
@@ -11,7 +11,7 @@ function App() {
     <>
     <Nav />
     
-    <Items />
+    <Item />
     <ItemCount initial={1} stock={5}/>
     
     </>
