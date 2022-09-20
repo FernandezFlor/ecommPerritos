@@ -1,25 +1,26 @@
 import logo from '../img/logo.png';
 import Cart from './CartWidget.js';
-
+import {Link} from 'react-router-dom'
 const Nav = () => {
     return(
         <div className="App">
         <nav className="menuNav" id="nav">
-            <a href="index.html">
+            <Link to="/">
                 <img src={logo} alt="Logo de perritos" class="logo"/>
-            </a>
+            </Link>
+            
             <ul className="crearLista">
                 <li className="lista">
-                    <a href="#">Galeria</a>
+                    <Link to='/'>Galeria</Link>
                 </li>
                 <li className="lista">
-                    <a href="#">Sobre nosotros</a>
+                    <Link to='/category/1'>Categoria 1</Link>
                 </li>
                 <li className="lista">
-                    <a href="#">Reseñas</a>
+                    <Link to='/category/2'>Categoria 2</Link>
                 </li>
                 <li className="lista">
-                    <a href="#">Contacto</a>
+                    <Link to='/'>Contacto</Link>
                 </li>
             </ul>
             <Cart/>

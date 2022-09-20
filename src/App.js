@@ -1,7 +1,7 @@
 import Nav from './components/Nav.js'
-import Item from './components/ItemDetailContainer.js'
-import ItemCount from './components/ItemCount.js'
-
+import ItemDetailContainer from './components/ItemDetailContainer.js'
+import ItemListContainer from './components/ItemListContainer.js';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './App.css';
 
 
@@ -9,10 +9,16 @@ import './App.css';
 function App() {
   return (
     <>
+    <Router>
     <Nav />
     
-    <Item />
-    <ItemCount initial={1} stock={5}/>
+    <Routes>
+      <Route exact path='/' element={<ItemListContainer greeting={"Hola Mundo"}/>}/>
+      <Route path='category/:categoria' element={<ItemListContainer greeting={"Hola mundo"}/>}/>
+      <Route path='item/id' element={<ItemDetailContainer/>}/>
+    </Routes>
+    </Router>
+
     
     </>
   );
