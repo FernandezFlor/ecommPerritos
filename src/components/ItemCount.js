@@ -4,7 +4,7 @@ const ItemCount=({initial, stock})=>{
     const [itemCount, setItemCount]=useState(1);
     
     const handleAdd=()=>{
-        if(itemCount<=stock){
+        if(itemCount<stock){
             setItemCount(itemCount+1);
         }
         
