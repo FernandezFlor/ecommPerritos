@@ -19,9 +19,6 @@ const Nav = () => {
                 <li className="lista">
                     <Link to='/category/2'>Categoria 2</Link>
                 </li>
-                <li className="lista">
-                    <Link to='/'>Contacto</Link>
-                </li>
             </ul>
             <Cart/>
         </nav>

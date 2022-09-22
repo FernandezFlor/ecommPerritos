@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.js'
-import productos from './products';
-
+import products from './products.js'
 const ItemDetailContainer=()=>{
 
     const [item, setItem]=useState({})
@@ -14,18 +13,18 @@ const ItemDetailContainer=()=>{
         return new Promise((resolve,reject)=>{
             setTimeout(()=>{
                 if(id){
-                    resolve(productos.find((item).id===id));
+                    resolve(products.find(item=>item.id==id));
                 }else resolve(products);
-            },2000)
+            }, 2000)
         })
     }
 
     useEffect(()=>{
         setTimeout(()=>{
-            customFetch(id).then((data)=>{
+            customFetch(products).then((data)=>{
                 setItem(data);
             });
-        }, 2000);
+        }, 2000)
     }, [id]);
 
     return(

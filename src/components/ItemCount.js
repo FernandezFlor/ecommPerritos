@@ -1,8 +1,9 @@
 import { useState } from "react";
 
-const ItemCount=({initial, stock})=>{
-    const [itemCount, setItemCount]=useState(1);
-    
+const ItemCount=()=>{
+    const [itemCount, setItemCount]=useState(0);
+    const stock=10;
+    const initial=0;
     const handleAdd=()=>{
         if(itemCount<stock){
             setItemCount(itemCount+1);
