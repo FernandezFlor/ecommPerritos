@@ -17,11 +17,9 @@ function App() {
       <Route exact path='/' element={<ItemListContainer greeting={"Hola Mundo"}/>}/>
       <Route path='category/:categoria' element={<ItemListContainer greeting={"Hola mundo"}/>}/>
       <Route path='item/:id' element={<ItemDetailContainer/>}/>
-      <Route path='/cart' element={<Cart/>}/>
+      <Route path ='item/:id/:cart' element={<Cart/>}/>
     </Routes>
     </Router>
-
-    
     </>
   );
 }
