@@ -8,7 +8,7 @@ const ItemDetail = ({product}) =>{
     const [itemCount, setItemCount] = useState(0);
     
     const onAdd = (stock) => {
-    alert("seleccionaste " + stock  + " productos.");
+    alert("seleccionaste " + stock  + " "+product.name+" teniendo que pagar un total de: $"+stock*product.price);
     setItemCount(stock);
 }
 
@@ -21,7 +21,7 @@ const ItemDetail = ({product}) =>{
         {
             itemCount === 0
             ?<Contador stock={product.stock} initial={itemCount} onAdd={onAdd}/>
-            :<Link to='cart'><Button variant="container">verificacion</Button></Link>
+            :<Link to='cart'><Button variant="container">Checkout</Button></Link>
         }
        
         </>
