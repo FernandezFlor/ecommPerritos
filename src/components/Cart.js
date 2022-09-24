@@ -6,9 +6,10 @@ const Cart = () =>{
   return(
       <>
           <h1>Carrito</h1>
-          {
-            ctx.map(item=><li>{item}</li>)
-          }
+          <button onClick={ctx.clear}>Borrar Todo</button>
+            {       
+                ctx.cartList.map(product => <li>{product.name}  {product.price}<button onClick={()=>ctx.removeItem(product.id)}>Borrar</button></li>)
+            }
       </>
   )
 }

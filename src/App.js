@@ -3,7 +3,7 @@ import ItemDetailContainer from './components/ItemDetailContainer.js'
 import ItemListContainer from './components/ItemListContainer.js';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Cart from './components/Cart.js'
-import {CartContext} from './components/CartContext.js'
+import CartContextProvider from './components/CartContext.js'
 import './App.css';
 
 
@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <>
-    <CartContext.Provider value={['Coca Cola','Cocucha']}>
+    <CartContextProvider>
       <Router>
         <Nav />
         
@@ -22,7 +22,7 @@ function App() {
           <Route path ='item/:id/:cart' element={<Cart/>}/>
         </Routes>
       </Router>
-    </CartContext.Provider>
+      </CartContextProvider>
     </>
   );
 }

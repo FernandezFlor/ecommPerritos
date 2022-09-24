@@ -2,14 +2,19 @@ import React, {useState} from 'react'
 import Contador from './ItemCount'
 import {Link} from 'react-router-dom'
 import Button from '@mui/material/Button';
+import { useContext } from 'react';
+import {CartContext} from './CartContext.js'
+
+
 
 const ItemDetail = ({product}) =>{
-
+    const ctx=useContext(CartContext);
     const [itemCount, setItemCount] = useState(0);
     
-    const onAdd = (stock) => {
-    alert("seleccionaste " + stock  + " "+product.name+" teniendo que pagar un total de: $"+stock*product.price);
-    setItemCount(stock);
+    const onAdd = (qty) => {
+    alert("seleccionaste " + qty  + " "+product.name+" teniendo que pagar un total de: $"+qty*product.price);
+    setItemCount(qty);
+    ctx.addItem(product,qty)
 }
 
     return(
