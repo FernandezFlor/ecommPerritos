@@ -11,18 +11,19 @@ const ItemDetail = ({product}) =>{
     const ctx=useContext(CartContext);
     const [itemCount, setItemCount] = useState(0);
     
-    const onAdd = (qty) => {
-    alert("seleccionaste " + qty  + " "+product.name+" teniendo que pagar un total de: $"+qty*product.price);
-    setItemCount(qty);
-    ctx.addItem(product,qty)
+    const onAdd = (stock) => {
+    alert("seleccionaste " + stock  + " "+product.name+" teniendo que pagar un total de: $"+stock*product.price);
+    setItemCount(stock);
+    ctx.addItem(product,stock)
 }
 
     return(
         <>
-        <div>{product.name}</div>
-        <div>{product.price}</div>
+        <h1>{product.name}</h1>
+        <h2>Precio: ${product.price}</h2>
         <img src={product.img} alt="asdsd"/>
-        <div>{product.details}</div>  
+        <h3>Stock disponible:{product.stock}</h3>
+        <h4>{product.details}</h4>  
         {
             itemCount === 0
             ?<Contador stock={product.stock} initial={itemCount} onAdd={onAdd}/>
