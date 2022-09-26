@@ -12,8 +12,6 @@ const CreateCartContext=({children})=>{
         
         if(isInCart(product.id)){
             let array = cartList.map(element=>(
-                //Si el elemento no tiene ese id devuelve el mismo elemento 
-                //De ser coincidir se envia el objeto con la cantidad incrementada
                 (element.id!=product.id)? 
                 element:
                 {
