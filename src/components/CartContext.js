@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const CartContext=createContext();
 
 const CreateCartContext=({children})=>{
-    const [cartList, setCartList]= useState(['Coca Cola','Cocucha']);
+    const [cartList, setCartList]= useState();
     const isInCart=(id)=>{
         return cartList.filter(product => product.id==parseInt(id)).length>0;
     }//true or false
