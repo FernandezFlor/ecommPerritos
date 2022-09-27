@@ -39,11 +39,15 @@ const CreateCartContext=({children})=>{
         setCartList(cartList.filter(product => product.id !== id))
     }
 
+    const qtyProd=()=>{
+        let qtys=cartList.map(product=>product.quantity);
+        return qtys.reduce(((previousValue, currentValue)=>previousValue+currentValue), 0);
+    }
 
     return(
         <>
         
-        <CartContext.Provider value={{cartList, addItem, clear, removeItem}}>
+        <CartContext.Provider value={{cartList, addItem, clear, removeItem, qtyProd}}>
             {children}
         </CartContext.Provider>
         </>

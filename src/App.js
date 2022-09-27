@@ -20,6 +20,7 @@ function App() {
           <Route path='category/:categoria' element={<ItemListContainer greeting={"Hola mundo"}/>}/>
           <Route path='item/:id' element={<ItemDetailContainer/>}/>
           <Route path ='item/:id/:cart' element={<Cart/>}/>
+          <Route path ='/cart' element={<Cart/>}/>
         </Routes>
       </Router>
       </CartContextProvider>

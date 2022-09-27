@@ -1,8 +1,13 @@
-import { Cart2 } from 'react-bootstrap-icons';
-
+import {ShoppingCartOutlined} from "@material-ui/icons";
+import {Badge} from "@material-ui/core";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 const CartWidget = () => {
+    const test=useContext(CartContext);
     return( 
-    <Cart2 />
+    <Badge badgeContent={test.qtyProd()} color="secondary">
+        <ShoppingCartOutlined/>
+    </Badge>
 
     )
 }

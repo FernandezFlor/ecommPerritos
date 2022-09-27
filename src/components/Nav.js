@@ -20,7 +20,7 @@ const Nav = () => {
                     <Link to='/category/2'>Categoria 2</Link>
                 </li>
             </ul>
-            <Cart/>
+            <Link to='cart'><Cart/></Link>
         </nav>
     </div>
     );

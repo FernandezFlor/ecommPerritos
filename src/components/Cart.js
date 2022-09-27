@@ -9,7 +9,7 @@ const Cart = () =>{
       <>
           <h1>Carrito</h1>
           <Link to='/'><Button>Seguir comprando</Button></Link>
-          <button onClick={ctx.clear}>Vaciar carrito</button>
+          <Button onClick={ctx.clear}>Vaciar carrito</Button>
             {       
                 ctx.cartList.map(product => 
                   <div className="container">
