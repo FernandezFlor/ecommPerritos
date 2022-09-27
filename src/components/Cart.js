@@ -5,12 +5,14 @@ import {CartContext} from './CartContext.js'
 const Cart = () =>{
   const ctx=useContext(CartContext);
  
+
   return(
       <>
           <h1>Carrito</h1>
           <Link to='/'><Button>Seguir comprando</Button></Link>
           <Button onClick={ctx.clear}>Vaciar carrito</Button>
-            {       
+            {     
+  
                 ctx.cartList.map(product => 
                   <div className="container">
                     <h4>Nombre: {product.name}</h4>
@@ -20,6 +22,7 @@ const Cart = () =>{
                     <h4><Button onClick={()=>ctx.removeItem(product.id)}>Eliminar</Button></h4>
                 </div>)
             }
+            
       </>
   )
 }
