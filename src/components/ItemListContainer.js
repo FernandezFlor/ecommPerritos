@@ -5,38 +5,28 @@ import { useParams } from 'react-router-dom'
 import { collection, getDocs, where } from "firebase/firestore";
 import { db } from '../utils/firebaseConfig.js';
 import {customFetch} from "./customFetch"
-import { async } from '@firebase/util';
 
 const ItemListContainer=({greeting})=>{
 
    const [listProducts, setListProducts]=useState([]);
    const {categoria}=useParams();
    
+   useEffect(async()=>{
+    const querySnapshot = await getDocs(collection(db, "products"));
+    const dataFromFirestore = querySnapshot.docs.map(item=>({
+        id: item.id,
+        ...item.data()
+    }))
+    setListProducts(dataFromFirestore)
+    }, [categoria]);
+
+  
    
    useEffect(()=>{
-    async function fetchData(){
-        if(id){
-        const querySnapshot=await getDocs(collection(db, "products"),
-        where('categoria', '==', id));
-        const dataFromFirestore=querySnapshot.docs.map(item=>({
-            id: item.id,
-            ...item.data()
-        }));
-        setListProducts(dataFromFirestore)
-    }else{
-        const querySnapshot=await getDocs(collection(db, "products"));
-        const dataFromFirestore=querySnapshot.docs.map(item=>({
-            id: item.id,
-            ...item.data()
-        }));
-        setListProducts(dataFromFirestore)
-    }
-}
-
-fetchData();
-   })
-
-
+    return(()=>{
+        setListProducts([]);
+    })
+   }, []);
     return(
         <>
         <div><ItemList listProducts={listProducts}/></div>
