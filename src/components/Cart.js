@@ -1,10 +1,15 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import {CartContext} from './CartContext.js'
 const Cart = () =>{
   const ctx=useContext(CartContext);
- 
+  const [totalCost, setTotalCost]=useState(0)
+  const [emptyCart, setEmptyCart]=useState(true)
+  useEffect(()=>{
+    setTotalCost(ctx.total)
+    setEmptyCart(ctx.totalProducts==0)
+  }, [ctx])
 
   return(
       <>
@@ -22,6 +27,18 @@ const Cart = () =>{
                     <h4><Button onClick={()=>ctx.removeItem(product.id)}>Eliminar</Button></h4>
                 </div>)
             }
+          <div>
+            {
+              emptyCart?
+              <></>
+              :<h2>Carrito vacio </h2>
+            }
+          </div>
+          <div>
+            <h3>Resumen de la compra</h3>
+            <h5>Total ${totalCost}</h5>
+            <button>Checkout</button>
+          </div>
             
       </>
   )

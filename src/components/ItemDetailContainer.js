@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail.js'
-import products from './products.js'
+import { db } from '../utils/firebaseConfig';
+import { doc, getDoc ,query} from "firebase/firestore";
 
 const ItemDetailContainer =() =>{
     const [item, setItem] = useState({})
@@ -9,23 +10,15 @@ const ItemDetailContainer =() =>{
     const {id} = useParams()
     console.log(id)
 
-    const customFetch =(productos) =>{
-        return new Promise((resolve, reject) => {
-            setTimeout(() =>{
-                if(id){
-                    resolve(products.find((item) => item.id == id));  
-                }else resolve(productos);
-            }, 2000);
-        });
-    };
-    
-    useEffect(()=>{
-        setTimeout(()=>{
-            customFetch(id)
-            .then(data => {setItem(data)})
-        },2000);
-    }, [id])
-    console.log(item)
+    useEffect(()=>{ 
+        async function GetFBData(){
+            const product = query(doc(db, "products",id))
+            const docSnap = await getDoc(product);
+            setItem({...docSnap.data(),id:id})
+        }
+        GetFBData()
+    }, [id]);
+
     return(
         <>
             <ItemDetail product = {item}/>

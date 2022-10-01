@@ -44,10 +44,33 @@ const CreateCartContext=({children})=>{
         return qtys.reduce(((previousValue, currentValue)=>previousValue+currentValue), 0);
     }
 
+    const total=()=>{
+        let totalPrice=0;
+        if(cartList.length>0){
+            let cost=cartList.map((product)=>(
+                product.price*product.quantity
+            ))
+            totalPrice=cost.reduce((a,b)=>{return a+b})
+        }
+        return totalPrice;
+    }
+    const totalProducts = ()=>{
+        let products = 0;
+        if(cartList.length >0 ){
+            products = cartList.map((product)=>(
+                product.quantity
+            ))
+            products.length==1 ? products = cartList[0].quantity
+            :products = products.reduce((a, b)=>{ return a + b})
+        }
+        return products;
+    }
+
+
     return(
         <>
         
-        <CartContext.Provider value={{cartList, addItem, clear, removeItem, qtyProd}}>
+        <CartContext.Provider value={{cartList, addItem, total, totalProducts, clear, removeItem, qtyProd}}>
             {children}
         </CartContext.Provider>
         </>

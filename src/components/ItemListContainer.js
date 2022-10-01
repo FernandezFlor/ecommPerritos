@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import productos from './products.js'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import {db} from '../utils/firebaseConfig';
 import { collection, getDocs, where, query } from "firebase/firestore";
-import {customFetch} from "./customFetch"
+
 
 const ItemListContainer=({greeting})=>{
 
