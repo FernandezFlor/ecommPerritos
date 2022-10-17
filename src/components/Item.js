@@ -4,10 +4,10 @@ const Item=({product})=>{
     return(
         <>
         <div>{product.name}</div>
-        <div>{product.price}</div>
+        <div>Precio: ${product.price}</div>
         <img src={product.img} alt="asdsd"/>
-        <div>{product.details}</div>  
-        <Link to={`/item/${product.id}`}><button>Detalle</button></Link>  
+        <br></br>
+        <Link to={`/item/${product.id}`}><button>Ver más</button></Link>  
         </>
     )
 }

@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Contador from './ItemCount'
 import {Link} from 'react-router-dom'
-import Button from '@mui/material/Button';
 import { useContext } from 'react';
 import {CartContext} from './CartContext.js'
 
@@ -27,7 +26,7 @@ const ItemDetail = ({product}) =>{
         {
             itemCount === 0
             ?<Contador stock={product.stock} initial={itemCount} onAdd={onAdd}/>
-            :<Link to='cart'><Button variant="container">Checkout</Button></Link>
+            :<Link to='cart'><button>Checkout</button></Link>
         }
        
         </>

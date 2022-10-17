@@ -5,7 +5,7 @@ export const CartContext=createContext();
 const CreateCartContext=({children})=>{
     const [cartList, setCartList]= useState([]);
     const isInCart=(id)=>{
-        return cartList.filter(product => product.id==parseInt(id)).length>0;
+        return cartList.filter(product=>product.id==id).length>0;
     }//true or false
     
    const addItem=(product,quantity)=>{

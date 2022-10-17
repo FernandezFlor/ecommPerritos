@@ -3,7 +3,7 @@ import Cart from './CartWidget.js';
 import {Link} from 'react-router-dom'
 const Nav = () => {
     return(
-        <div className="App">
+        <div>
         <nav className="menuNav" id="nav">
             <Link to="/">
                 <img src={logo} alt="Logo de perritos" class="logo"/>
@@ -14,10 +14,10 @@ const Nav = () => {
                     <Link to='/'>Galeria</Link>
                 </li>
                 <li className="lista">
-                    <Link to='/category/1'>Categoria 1</Link>
+                    <Link to='/category/1'>Talles grandes</Link>
                 </li>
                 <li className="lista">
-                    <Link to='/category/2'>Categoria 2</Link>
+                    <Link to='/category/2'>Talles chicos</Link>
                 </li>
             </ul>
             <Link to='cart'><Cart/></Link>

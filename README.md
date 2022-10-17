@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Proyecto Ecommerce de Florencia Fernández para la comisión 37610
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto fue hecho con la utilización de React js principalmente, JavaScript, CSS y Firebase gracias al curso de React js de CoderHouse :D
 
-## Available Scripts
+## Funcionalidades del proyecto
 
-In the project directory, you can run:
+En este proyecto se simula una tienda virtual que vende prendas para mascotas cuyas funciones son:
 
-### `npm start`
+### `Poder ver la lista de productos de forma total y parcial (con categorias)`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `Poder ver en detalle un producto para agregarlo al carrito`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Ya en el carrito, se puede ver el costo por unidad, costo por unidades seleccionadas y la suma total de los productos que contenga el mismo`
 
-### `npm test`
+### `Eliminar productos del carrito`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Hacer checkout y que el dato de tu compra quede registrada en Firebase`
 
-### `npm run build`
+**Note: la tienda recién acaba de inagurar, por eso tiene pocos productos, si todo sale bien podran expandir (?)**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Agradecimientos especiales :D
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Al equipo de Empujar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Gracias por haberme permitido formar parte de un grupo donde resalta el compañerismo, la unión y motivación. 
+Gracias Marian por ponerte el grupo al hombro haciendonos vivir una experiencia tan linda, llena de aprendizajes y desafíos brindando un soporte único.
 
-### `npm run eject`
+### Al equipo de Coder
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Gracias por haber brindado herramientas fundamentales para nuestro desarrollo, apostando por la juventud dándonos la oportunidad de ser mejores profesionales ♥
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Al profesor y tutor
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Gracias Alex por mostrarnos una nueva forma de aprendizaje, donde resalta un sentimiento de pertenencia único y un disfrute que contagía. Espero en un futuro ser una profesional a tu altura, con tu misma dedicación y alegria :D
+PD: Gracias por aceptarme en LinkedIn ♥
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Gracias a mi tutor por acompañarme a lo largo de todo este proyecto, tus devoluciones me motivaron a mejorar y no bajar los brazos ♥
 
-## Learn More
+**Note: la sección anterior estuvo inspirada en como estuvo la última clase, de hecho, ni sé si vaya a estar bien que lo ponga**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

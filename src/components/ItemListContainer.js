@@ -2,18 +2,16 @@ import React, {useState, useEffect} from 'react'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import {db} from '../utils/firebaseConfig';
-import { collection, getDocs, where, query } from "firebase/firestore";
+import {collection, getDocs, where, query} from "firebase/firestore";
 
 
-const ItemListContainer=({greeting})=>{
+const ItemListContainer=()=>{
 
    const [listProducts, setListProducts]=useState([]);
    const {categoria}=useParams();
    
-   
    useEffect(()=>{
     if(categoria){
-      //trae solo algunos
       const getData = async ()=>{
         const q = query(collection(db, "products"), where('categoria', '==', categoria))
         const querySnapshot = await getDocs(q);

@@ -14,10 +14,9 @@ function App() {
     <CartContextProvider>
       <Router>
         <Nav />
-        
         <Routes>
-          <Route exact path='/' element={<ItemListContainer greeting={"Hola Mundo"}/>}/>
-          <Route path='category/:categoria' element={<ItemListContainer greeting={"Hola mundo"}/>}/>
+          <Route exact path='/' element={<ItemListContainer/>}/>
+          <Route path='category/:categoria' element={<ItemListContainer/>}/>
           <Route path='item/:id' element={<ItemDetailContainer/>}/>
           <Route path ='item/:id/:cart' element={<Cart/>}/>
           <Route path ='/cart' element={<Cart/>}/>
