@@ -1,4 +1,4 @@
-# Proyecto Ecommerce de Florencia Fernández para la comisión 37610
+# Proyecto Ecommerce de Florencia Fernández
 
 Este proyecto fue hecho con la utilización de React js principalmente, JavaScript, CSS y Firebase gracias al curso de React js de CoderHouse :D
 
@@ -6,15 +6,23 @@ Este proyecto fue hecho con la utilización de React js principalmente, JavaScri
 
 En este proyecto se simula una tienda virtual que vende prendas para mascotas cuyas funciones son:
 
-### `Poder ver la lista de productos de forma total y parcial (con categorias)`
+### `Poder ver la lista de productos`
+
+Se puede ver de forma total (tocando el logo o galeria) o de forma parcial ingresando a las diferentes categorias
 
 ### `Poder ver en detalle un producto para agregarlo al carrito`
 
-### `Ya en el carrito, se puede ver el costo por unidad, costo por unidades seleccionadas y la suma total de los productos que contenga el mismo`
+En el mismo se puede ver una breve descripción del producto y el stock.
+
+### `Ver información de los productos agregados al carrito`
+
+Ya en el carrito, se puede ver el costo por unidad y el precio por la cantidad de un mismo producto seleccionado. También se puede ver el precio total de toda la compra.
 
 ### `Eliminar productos del carrito`
 
-### `Hacer checkout y que el dato de tu compra quede registrada en Firebase`
+### `Hacer checkout`
+
+No solo el dato de tu compra queda registrado en la flamante base de datos de Firebase, sino que también te convertís en Messi, ¿Qué mejor que eso?
 
 **Note: la tienda recién acaba de inagurar, por eso tiene pocos productos, si todo sale bien podran expandir (?)**
 
@@ -37,4 +45,3 @@ PD: Gracias por aceptarme en LinkedIn ♥
 Gracias a mi tutor por acompañarme a lo largo de todo este proyecto, tus devoluciones me motivaron a mejorar y no bajar los brazos ♥
 
 **Note: la sección anterior estuvo inspirada en como estuvo la última clase, de hecho, ni sé si vaya a estar bien que lo ponga**
-
